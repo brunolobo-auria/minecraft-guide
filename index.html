@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minecraft: Roteiro de Objetivos</title>
+<title>Minecraft: Roteiro de Objetivos · brinolobo</title>
+<meta name="author" content="brinolobo">
 <style>
 :root{
   --bg:#12100e;--panel:#1d1a17;--panel2:#26221e;--line:#3a332c;
@@ -127,6 +128,39 @@ footer a{margin-right:14px}
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(120px);background:#000;border:3px solid var(--gold);color:var(--gold);
   font-family:var(--px);font-weight:900;padding:12px 18px;transition:.35s;z-index:50}
 .toast.show{transform:translateX(-50%) translateY(0)}
+.author{margin-top:14px;font-family:var(--px);font-weight:700;font-size:14px;color:#fff;text-shadow:2px 2px 0 #000}
+.author b{color:var(--gold)}
+
+/* ===== AJUSTES MOBILE (sem scroll horizontal) ===== */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg{max-width:100%}
+.idx{grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr))}
+.rules{grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}
+.groups{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.ores{grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.tips{grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}
+.item .lbl,.ore p,.marco,.lead{overflow-wrap:anywhere}
+@media(max-width:600px){
+  main{padding:20px 12px 60px}
+  .panel{padding:14px;box-shadow:4px 4px 0 #000}
+  .hero{padding:56px 14px 48px}
+  .hero p{font-size:15px}
+  h2{flex-wrap:wrap;gap:8px}
+  .group{padding:12px 10px 6px}
+  .item{font-size:14px}
+  .ore-chart{height:360px;margin-left:36px}
+  .ytick{left:-38px;width:34px;font-size:9px}
+  .yzone{font-size:8px}
+  .cols,.xlabels{gap:2px;padding:0 2px}
+  .xlabels{margin-left:36px;font-size:9px;word-break:break-word}
+  .peak{left:4%;right:4%}
+  .peak em{font-size:9px;padding:0 2px}
+  .rng{left:22%;right:22%}
+  .btn{font-size:14px;padding:10px 14px}
+  .toast{max-width:90vw;text-align:center;font-size:13px}
+  footer{padding:18px 12px 40px}
+  footer a{display:inline-block;margin:4px 10px 4px 0}
+}
 </style>
 </head>
 <body>
@@ -139,6 +173,7 @@ footer a{margin-right:14px}
   <p>Sete fases, uma ordem lógica e muitas caixinhas para marcar. Do primeiro abrigo ao farol aceso.</p>
   <div class="progress-wrap"><div class="progress-bar" id="pbar"></div></div>
   <div class="progress-label" id="plabel">0% concluído</div>
+  <div class="author">Um projeto de <b>brinolobo</b></div>
 </header>
 
 <nav><ul id="nav"></ul></nav>
@@ -201,6 +236,7 @@ footer a{margin-right:14px}
 </main>
 
 <footer>
+  <p style="margin-bottom:10px;color:var(--txt)">Criado por <b style="color:var(--gold)">brinolobo</b> · Roteiro de Objetivos de Minecraft</p>
   Fontes: <a href="https://berrybyte.net/blog/minecraft-ore-distribution-guide-1-21-best-y-levels-for-every-ore" target="_blank" rel="noopener">berrybyte — Ore Distribution (1.21–26.2)</a>
   <a href="https://minecraft.wiki/w/Ore" target="_blank" rel="noopener">Minecraft Wiki — Ore</a>
   <a href="https://www.chunkbase.com/apps/seed-map" target="_blank" rel="noopener">Chunkbase Seed Map</a>
